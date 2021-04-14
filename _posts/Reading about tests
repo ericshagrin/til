@@ -1,0 +1,22 @@
+Utilized: https://guides.rubyonrails.org/testing.html
+
+Rails has an action "test", which makes it so you can write code such as "test 'should report error' do" and then jsut draft the test
+
+Assertions are the basics of tests, and there's a lot of them assert_equal to assert_not_respond_to (obj, symbold, [msg] ) whcih ensure that obj doesn't respond to symbol
+
+-n --name tags let you run a test of your choicing
+you can also provide specifc lines 
+
+bin/rails tests to run all of your tests
+bin/rails test <filename containing tests cases> runs all the tests
+
+Fixtures allow you to utilize data in your tests
+
+Using test/system directory, system_test allows you to make real tests (running in, for example, a chrome browser)
+
+test_screenshot and test_failed_screenshot can be used to see where your tests failed on the browser
+
+Integtation tests help test how various pages of our website interact
+1. integration test runner: ActionDispatch::Integration::Runner.
+2. performing requests: ActionDispatch::Integration::RequestHelpers 
+3. modify the session: ActionDispatch::Integration::Session 
